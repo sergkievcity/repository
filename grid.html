@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<header>Header</header>
+		<div class="content">Content</div>
+		<aside class="left">Left sidebar</aside>
+		<aside class="right">Right sidebar</aside>
+		<footer>Footer</footer>
+	</div>
+</body>
+<style>
+body{
+	margin:0;
+	text-align: center;	
+}
+	.container{
+		display: grid;
+		grid-template-areas:"header header header"
+												"l-sidebar main r-sidebar"
+												"footer footer footer";
+		grid-template-columns: 200px 1fr 200px;
+		grid-template-rows: 100px 1fr 100px;
+		min-height: 100vh;
+		grid-gap:5px;
+	}
+			header{
+				grid-area:header;
+				background:yellow;
+			}
+			.content{
+				grid-area:main;
+				background:blue;
+			}
+			aside.left{
+				grid-area:l-sidebar;
+				background:red;
+			}
+			aside.right{
+				grid-area:r-sidebar;
+				background:red;
+			}
+			footer{
+				grid-area:footer;
+				background:brown;
+			}
+
+@media screen and (max-width: 600px) {
+	.container{
+			grid-template-areas: "header"
+													 "l-sidebar"
+													 "main"
+													 "r-sidebar"
+													 "footer";
+			grid-template-columns:100%;
+			grid-template-rows:100px 50px 1fr 50px 30px;
+				
+			}
+			}			
+	
+</style>
+</html>

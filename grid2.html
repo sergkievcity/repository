@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div class="block">1</div>
+		<div class="block">2</div>
+		<div class="block">3</div>
+		<div class="block">4</div>
+		<div class="block">5</div>
+		<div class="block">6</div>
+		<div class="block">7</div>
+		<div class="block">8</div>
+	</div>
+</body>
+<style>
+body{
+	margin:0;
+}
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap:5px;
+}
+
+	.block{
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		width: 100%;
+		min-height: 10vh;
+		background: -webkit-linear-gradient(left, #32d32a 0%,#20ada8 35%,#4e92c9 57%,#0986e5 100%);
+		
+	}
+
+	@media screen and (min-width:520px){
+			.container{
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-column-gap:5px;
+						grid-row-gap:5px;
+}
+	}
+
+@media screen and (min-width:920px){
+			.container{
+						display: grid;
+						grid-template-columns: 1fr 3fr 1fr;
+						grid-column-gap:5px;
+						grid-row-gap:5px;
+}
+	}	
+</style>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</html>
